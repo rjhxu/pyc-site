@@ -1,26 +1,67 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+/* Tailwind CSS v4 - Design Tokens */
+@layer theme {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Colors - Pastel violet/lavender/pink palette */
+    --color-primary: #c4b5fd; /* lavender */
+    --color-primary-dark: #a78bfa; /* deeper lavender */
+    --color-secondary: #fbbfca; /* pastel pink */
+    --color-accent-blue: #60a5fa; /* electric blue */
+    --color-accent-yellow: #fde68a; /* warm pastel yellow */
+    
+    /* Background */
+    --color-background: #ffffff;
+    --color-background-secondary: #faf5ff; /* very light lavender */
+    
+    /* Text */
+    --color-text-primary: #1f2937;
+    --color-text-secondary: #6b7280;
+    --color-text-light: #9ca3af;
+    
+    /* Border */
+    --color-border: #e5e7eb;
+    --color-border-light: #f3f4f6;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+    
+    /* Container */
+    --container-max-width: 1280px;
+    --container-padding: 1rem;
   }
 }
 
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-text-primary);
+  background: var(--color-background);
+  background-image:
+    linear-gradient(rgba(196, 181, 253, 0.1) 2px, transparent 1px),
+    linear-gradient(90deg, rgba(196, 181, 253, 0.1) 2px, transparent 1px);
+  background-size: 40px 40px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container utility */
+.container-custom {
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
 }
