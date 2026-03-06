@@ -12,7 +12,7 @@ export default function EventsPage() {
 
   // Sort events chronologically
   const sortedEvents = [...events].sort((a, b) => 
-    new Date(a.date).getTime() - new Date(b.date).getTime()
+    new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 
   return (
