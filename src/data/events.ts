@@ -51,7 +51,7 @@ The evening features:
 - Charity fundraising supporting 360°kids
 
 Dress up, celebrate the season, and join us in supporting an important cause while showcasing youth creativity and talent.`,
-    image: '/events/2024/winter-solstice/winter-solstice.png',
+    image: '/events/2025/solstice/winter-solstice.jpg',
   },
   {
     id: 'fall-coffeehouse',
@@ -73,7 +73,7 @@ The evening features:
 - A chance to meet and support young creatives
 
 Whether you're coming for the music, the coffee, or the community, the Fall Coffeehouse is the perfect way to spend a crisp autumn evening.`,
-    image: '/events/2024/fall-coffeehouse/fall-coffeehouse.png',
+    image: '/events/2025/fall-coffeehouse/fall-coffeehouse.png',
   },
 ];
 
