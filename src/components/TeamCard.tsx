@@ -13,7 +13,7 @@ export default function TeamCard({ member }: TeamCardProps) {
     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
       <div className="relative h-120 flex items-center justify-center">
         {imageError ? (
-          <p className="text-gray-500 text-lg">no image :(</p>
+          <p className="text-gray-500 text-lg">no image yet :(</p>
         ) : (
           <Image
             src={member.image}
