@@ -26,7 +26,7 @@ export const events: Event[] = [
 Come out to browse, support local talent, and connect with a community full of creativity. From handmade goods to original artwork and local brands, Purple Market is a space to celebrate and uplift youth creativity.
 
 Calling all small businesses, artists, and creators: this is YOUR opportunity to shine!`,
-    image: '/events/2026/purple-market/purple-market.png',
+    image: '/events/2025/purple-market/purple-market.png',
   },
   {
     slug: 'solstice',
@@ -49,7 +49,7 @@ Calling all small businesses, artists, and creators: this is YOUR opportunity to
 This year’s Mad Hatter’s Ball brought together live performances, raffles, and a photobooth for a night of creativity, community, and giving back.
 
 Guests enjoyed an evening of celebration while supporting an important cause and connecting with fellow youth in the arts community.`,
-    image: '/events/2025/solstice/solstice.png',
+    image: '/events/2025/solstice/winter-solstice.jpg',
   },
   {
     slug: 'fall-coffeehouse',
