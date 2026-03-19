@@ -25,10 +25,10 @@ export default function TeamCard({ member }: TeamCardProps) {
         )}
       </div>
       <div className="p-6">
-        <h3 className="text-2xl font-bold mb-1 text-purple-600" style={{ fontFamily: 'var(--font-mochiy-pop)' }}>
+        <h3 className="text-2xl font-bold mb-1 text-purple-500" style={{ fontFamily: 'var(--font-mochiy-pop)' }}>
           {member.name}
         </h3>
-        <p className="text-lg text-pink-500 mb-3" style={{ fontFamily: 'var(--font-mochiy-pop)' }}>
+        <p className="text-lg text-purple-400 mb-3" style={{ fontFamily: 'var(--font-mochiy-pop)' }}>
           {member.title}
         </p>
         {member.description?.trim() && (
