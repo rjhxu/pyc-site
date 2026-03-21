@@ -6,21 +6,20 @@ import { teams } from '@/data/team';
 
 export default function TeamPage() {
   const years = Object.keys(teams).sort().reverse();
-  const [selectedYear, setSelectedYear] = useState(years[0]);
+  const [selectedYear, setSelectedYear] = useState<string>(years[0] ?? '');
 
-  const currentTeam = teams[selectedYear] || [];
+  const currentTeam = teams[selectedYear] ?? [];
 
   return (
     <div className="min-h-screen py-12 bg-transparent">
       <div className="container-custom">
-        <h1 
+        <h1
           className="text-4xl font-bold text-center mb-8 text-black"
           style={{ fontFamily: 'var(--font-mochiy-pop)' }}
         >
           Our Team
         </h1>
-        
-        {/* Year Selector */}
+
         <div className="flex justify-center gap-4 mb-12 flex-wrap">
           {years.map((year) => (
             <button
@@ -38,10 +37,12 @@ export default function TeamPage() {
           ))}
         </div>
 
-        {/* Team Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {currentTeam.map((member) => (
-            <TeamCard key={member.id} member={member} />
+            <TeamCard
+              key={`${selectedYear}-${member.id}`}
+              member={member}
+            />
           ))}
         </div>
       </div>
