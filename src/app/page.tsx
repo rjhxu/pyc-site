@@ -1,49 +1,51 @@
-import type { Metadata } from 'next';
-import Hero from '@/components/Hero';
-import Image from 'next/image';
+'use client';
 
-export const metadata: Metadata = {
-  title: 'Platform for Youth Creativity',
-  description: 'Join us for creative events and opportunities for youth in the GTA.',
-};
+import { useState } from 'react';
+import TeamCard from '@/components/TeamCard';
+import { teams } from '@/data/team';
 
-export default function HomePage() {
+export default function TeamPage() {
+  const years = Object.keys(teams).sort().reverse();
+  const [selectedYear, setSelectedYear] = useState<string>(years[0] ?? '');
+
+  const currentTeam = teams[selectedYear] ?? [];
+
   return (
-    <div>
-      <Hero />
-      
-      {/* Who is PYC Section */}
-      <section className="py-12 bg-transparent flex items-center justify-center">
-        <div className="container-custom">
-          <div className="max-w-5xl mx-auto">
-            
-            
-            {/* Centered Image */}
-            <div className="mb-12">
-              <Image
-                src="/assets/who-is-pyc.png"
-                alt="who is Platform for Youth Creativity?"
-                width={900}
-                height={300}
-                className="rounded-lg"
-                priority
-              />
-            </div>
-            
-            
-            {/* Body Text - Handwritten Font (mochiy pop one) */}
-            <div className="max-w-4xl mx-auto">
-              <p 
-                className="text-xl leading-relaxed text-center"
-                style={{ fontFamily: 'var(--font-mochiy-pop)' }}
-              >
-                pyc is a youth arts council based in markham with the goal of providing artistic opportunities to youth around the gta  to unleash their creativity. through several events we hold throughout the year, including our seasonal coffeehouses, solstice, purple  market, and others, we help foster a positive environment for youth creatives both in person and online, for students to feel empowered by their artistic abilities and share their love of the arts with others!
-              </p>
-            </div>
-          </div>
+    <div className="min-h-screen py-12 bg-transparent">
+      <div className="container-custom">
+        <h1
+          className="text-4xl font-bold text-center mb-8 text-black"
+          style={{ fontFamily: 'var(--font-mochiy-pop)' }}
+        >
+          Our Team
+        </h1>
+
+        <div className="flex justify-center gap-4 mb-12 flex-wrap">
+          {years.map((year) => (
+            <button
+              key={year}
+              onClick={() => setSelectedYear(year)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all ${
+                selectedYear === year
+                  ? 'bg-purple-500 text-white shadow-lg scale-105'
+                  : 'bg-white text-purple-600 border-2 border-purple-300 hover:border-purple-500'
+              }`}
+              style={{ fontFamily: 'var(--font-inter)' }}
+            >
+              {year}
+            </button>
+          ))}
         </div>
-      </section>
-      
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+          {currentTeam.map((member) => (
+            <TeamCard
+              key={`${selectedYear}-${member.id}`}
+              member={member}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
