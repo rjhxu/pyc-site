@@ -1,4 +1,4 @@
-## 👋 Welcome to platformforyouthcreativity.com!
+## 👋 Welcome to PYC's website!
 
 Hey there 😁! Welcome to the official repo for the [Platform for Youth Creativity](https://platformforyouthcreativity.com) website! We're super excited to have you check out the code that powers our digital home. ✨
 
