@@ -7,7 +7,6 @@ export interface Event {
   shortDescription: string;
   fullDescription: string;
   image: string;
-  partners?: string[];
   sponsors?: string[];
 }
 
@@ -18,7 +17,7 @@ export const events: Event[] = [
     date: '2026-03-22',
     time: '1:00 PM - 4:00 PM',
     location: 'Varley Art Gallery (216 Main St Unionville)',
-    partners: ['Jukebox Print'],
+    sponsors: ['Jukebox Print'],
     shortDescription:
       'A creative market spotlighting young entrepreneurs, artists, and small businesses.',
     fullDescription: `Purple Market is a creative market spotlighting young entrepreneurs, artists, and small businesses.
@@ -36,9 +35,9 @@ Calling all small businesses, artists, and creators: this is YOUR opportunity to
     location: 'Markham Museum (9350 Markham Rd)',
     sponsors: [
       'Presotea',
-      'Félix & Norton Cookies',
+      'Felix and Norton',
       'Art Gallery of Ontario',
-      'Arcadia Earth Toronto',
+      'Arcadia Earth',
       'barBURRITO',
       'York Region Open Mic',
     ],
@@ -58,11 +57,11 @@ Guests enjoyed an evening of celebration while supporting an important cause and
     time: '6:00 PM - 9:00 PM',
     location: 'Unionville Starbucks (201 Main Street)',
     sponsors: [
-      'Unionville Starbucks',
+      'Starbucks',
       'Karen MacDonald',
       'Hummingbird Investment Holdings',
       'Royal Ontario Museum',
-      'Presotea Canada',
+      'Presotea',
       'Broadcast Entertainment & Fantasia',
       'York Region Open Mic',
     ],

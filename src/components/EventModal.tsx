@@ -2,7 +2,9 @@
 
 import { useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import type { Event } from '@/data/events';
+import { sponsors as allSponsors } from '@/data/sponsors';
 
 interface EventModalProps {
   event: Event;
@@ -22,6 +24,10 @@ export default function EventModal({ event, onClose }: EventModalProps) {
       document.body.style.overflow = 'unset';
     };
   }, [onClose]);
+
+  const eventSponsors = event.sponsors 
+    ? allSponsors.filter(s => event.sponsors?.includes(s.name))
+    : [];
 
   return (
     <div
@@ -78,11 +84,38 @@ export default function EventModal({ event, onClose }: EventModalProps) {
             </p>
           </div>
           
-          <div className="prose max-w-none">
+          <div className="prose max-w-none mb-8">
             <p className="text-gray-700 leading-relaxed whitespace-pre-line">
               {event.fullDescription}
             </p>
           </div>
+
+          {eventSponsors.length > 0 && (
+            <div className="mt-8 pt-8 border-t border-gray-100">
+              <h3 className="text-xl font-bold mb-6 text-gray-800">Event Sponsors</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 items-center justify-items-center">
+                {eventSponsors.map((sponsor, index) => (
+                  <Link
+                    key={index}
+                    href={sponsor.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full max-w-[150px] aspect-square relative flex items-center justify-center p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-50"
+                  >
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={sponsor.logo}
+                        alt={`${sponsor.name} Logo`}
+                        fill
+                        className="object-contain"
+                        sizes="(max-width: 640px) 50vw, 33vw"
+                      />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
