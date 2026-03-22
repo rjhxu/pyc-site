@@ -6,7 +6,7 @@ export default function SponsorsPage() {
     return (
         <div className="min-h-screen flex flex-col items-center py-16 px-4 sm:px-6 lg:px-8">
             <div className="w-full max-w-7xl">
-                <h1 className="text-4xl font-bold mb-12 text-center">Sponsors</h1>
+                <h1 className="text-5xl font-bold mb-12 text-center text-purple-400" style={{ fontFamily: 'var(--font-mochiy-pop)' }}>Sponsors</h1>
                 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-items-center">
                     {sponsors.map((sponsor, index) => (

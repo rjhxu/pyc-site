@@ -14,7 +14,7 @@ export default function TeamPage() {
     <div className="min-h-screen py-12 bg-transparent">
       <div className="container-custom">
         <h1
-          className="text-4xl font-bold text-center mb-8 text-black"
+          className="text-5xl font-bold text-center mb-12 text-purple-400"
           style={{ fontFamily: 'var(--font-mochiy-pop)' }}
         >
           Our Team
