@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Platform for Youth Creativity',
-  description: 'Join us for creative events and opportunities for youth in the GTA.',
+  description: 'PYC is a youth-led organization showcasing student creativity through events, community initiatives, and opportunities for young creators.',
 };
 
 export default function HomePage() {
