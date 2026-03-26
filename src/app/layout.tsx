@@ -3,6 +3,7 @@ import { League_Spartan, Mochiy_Pop_One, Inter, Caveat } from 'next/font/google'
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { Analytics } from '@vercel/analytics/next';
 
 const leagueSpartan = League_Spartan({
   subsets: ['latin'],
@@ -52,6 +53,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
