@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { formatEventDate } from '@/data/events';
 import type { Event } from '@/data/events';
 import { sponsors as allSponsors } from '@/data/sponsors';
 
@@ -66,12 +67,7 @@ export default function EventModal({ event, onClose }: EventModalProps) {
             <p className="flex items-center gap-2">
               <span className="text-xl">📅</span>
               <span className="font-semibold">
-                {new Date(event.date).toLocaleDateString('en-US', {
-                  weekday: 'long',
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                })}
+                {formatEventDate(event.date)}
               </span>
             </p>
             <p className="flex items-center gap-2">

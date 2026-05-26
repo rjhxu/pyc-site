@@ -10,11 +10,23 @@ export interface Event {
   sponsors?: string[];
 }
 
+// Parses 'YYYY-MM-DD' as a local calendar date so the displayed day
+// doesn't shift due to UTC parsing in the viewer's timezone.
+export function formatEventDate(dateStr: string): string {
+  const [year, month, day] = dateStr.split('-').map(Number);
+  return new Date(year, month - 1, day).toLocaleDateString('en-US', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+
 export const events: Event[] = [
   {
     slug: 'spring-fest',
     title: 'Spring Fest',
-    date: '2026-03-30',
+    date: '2026-05-30',
     time: '4:00 PM - 8:00 PM',
     location: 'Varley Art Gallery (216 Main St Unionville)',
     shortDescription:

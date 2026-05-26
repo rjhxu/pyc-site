@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { formatEventDate } from '@/data/events';
 import type { Event } from '@/data/events';
 
 interface EventCardProps {
@@ -28,12 +29,7 @@ export default function EventCard({ event, onClick }: EventCardProps) {
           {event.title}
         </h3>
         <p className="text-sm text-gray-600 mb-2">
-          📅 {new Date(event.date).toLocaleDateString('en-US', { 
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          })}
+          📅 {formatEventDate(event.date)}
         </p>
         <p className="text-sm text-gray-600 mb-2">
           🕐 {event.time}

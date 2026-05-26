@@ -10,10 +10,10 @@ export default function Hero() {
   const slides = [
     {
       id: 1,
-      title: 'PURPLE MARKET',
+      title: 'SPRING FEST',
       subtitle: 'upcoming:',
-      image: '/events/hero-purple-market.png',
-      modal: 'purple-market',
+      image: '/events/2026/spring-fest/spring-fest.png',
+      modal: 'spring-fest',
     },
   ];
 
