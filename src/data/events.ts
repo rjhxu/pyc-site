@@ -12,6 +12,19 @@ export interface Event {
 
 export const events: Event[] = [
   {
+    slug: 'spring-fest',
+    title: 'Spring Fest',
+    date: '2026-03-30',
+    time: '4:00 PM - 8:00 PM',
+    location: 'Varley Art Gallery (216 Main St Unionville)',
+    shortDescription:
+      'A night of live performances, cozy vibes, and good drinks in a café atmosphere.',
+    fullDescription: `A night of live performances, cozy vibes, and good drinks. We’re bringing together talented performers and a café atmosphere!!
+
+Whether you want to perform or just come watch and enjoy, this is the place to be.`,
+    image: '/events/2026/spring-fest/spring-fest.png',
+  },
+  {
     slug: 'purple-market',
     title: 'Purple Market',
     date: '2026-03-22',
