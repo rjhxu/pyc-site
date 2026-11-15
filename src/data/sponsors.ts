@@ -16,5 +16,5 @@ export const sponsors: Sponsor[] = [
     { name: 'Starbucks', logo: '/sponsors/Starbucks.PNG', url: 'https://www.starbucks.ca/' },
     { name: 'York Region Open Mic', logo: '/sponsors/York Region Open Mic.jpg', url: 'https://linktr.ee/yorkregionpenmic' },
     { name: 'barBURRITO', logo: '/sponsors/barBURRITO_Logo.png', url: 'https://www.barburrito.ca/' },
-    { name: 'Long & McQuade', logo: '/sponsors/Long and McQuade.PNG', url: 'https://www.long-mcquade.com/' },
+    { name: 'Long & McQuade', logo: '/sponsors/long n mcquade.png', url: 'https://www.long-mcquade.com/' },
 ];
