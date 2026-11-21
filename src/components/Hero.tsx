@@ -10,10 +10,10 @@ export default function Hero() {
   const slides = [
     {
       id: 1,
-      title: 'SPRING FEST',
+      title: 'UNDER THE STARS',
       subtitle: 'upcoming:',
-      image: '/events/2026/spring-fest/spring-fest.png',
-      modal: 'spring-fest',
+      image: '/events/2027/under the stars/Under the Stars.png',
+      modal: 'under-the-stars',
     },
   ];
 
