@@ -10,7 +10,7 @@ export default function Hero() {
   const slides = [
     {
       id: 1,
-      title: 'UNDER THE STARS',
+      title: 'SOLSTICE',
       subtitle: 'upcoming:',
       image: '/events/2027/under the stars/Under the Stars.png',
       modal: 'under-the-stars',
